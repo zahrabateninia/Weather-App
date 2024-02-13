@@ -14,7 +14,7 @@ body{
 }
 
 .card{
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: rgba(74, 68, 68, 0.671);
     padding: 2rem;
     color: white;
     border-radius: 35px;
@@ -59,22 +59,27 @@ body{
 opacity: 1;
 }
 /* /search box style */
+
+.weather-icon{
+    width: 5.2rem;
+    height: 5.2rem;
+    margin-top: 1rem;
+}
 .weather{
     display: flex;
     flex-direction: column;
     letter-spacing: 1px;
+    align-items: center;
 }
 .city-name{
-    font-size: 3.5rem;
-    align-self: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
 }
 .temp{
     font-size: 3rem;
-    align-self: center;
 }
 
 .description{
-    align-self: center;
     margin-bottom: 1.5rem;
 }
 .col{
@@ -82,7 +87,8 @@ opacity: 1;
 }
 .weather-details{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 1.3rem;
     font-size: 1.1rem;
 
 }
