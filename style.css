@@ -62,6 +62,7 @@ opacity: 1;
 .weather{
     display: flex;
     flex-direction: column;
+    letter-spacing: 1px;
 }
 .city-name{
     font-size: 3.5rem;
