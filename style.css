@@ -59,6 +59,36 @@ body{
 opacity: 1;
 }
 /* /search box style */
+.weather{
+    display: flex;
+    flex-direction: column;
+}
+.city-name{
+    font-size: 3.5rem;
+    align-self: center;
+}
 .temp{
-    margin: 1rem auto;
+    font-size: 3rem;
+    align-self: center;
+}
+
+.description{
+    align-self: center;
+    margin-bottom: 1.5rem;
+}
+.col{
+    display: flex;
+}
+.weather-details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+
+}
+
+.icon{
+    height: 3.1rem;
+    width: 3.1rem;
+    opacity: .6;
+    margin-right: .4rem;
 }
