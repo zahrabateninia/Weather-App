@@ -40,63 +40,62 @@ function updateUI(data){
 
 function changeWeatherIconAndBg(data){
     // based on weather condition change the icon
-    const weatherIcon = document.querySelector(".weather-icon")
+    const weatherIcon = document.querySelector(".weather-icon");
+    const body = document.body;
 
-    if( data.weather[0].main == "Clouds"){
-        document.body.style.backgroundImage = "url(weatherImages/cloudy.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/cloudySunny.png"
+    let backgroundImage;
+    let weatherIconSrc;
+
+    switch (data.weather[0].main) {
+        case "Clouds":
+            backgroundImage = "url(weatherImages/cloudy.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/cloudySunny.png";
+            break;
+        case "Clear":
+            backgroundImage = "url(weatherImages/sunny.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/sunny.png";
+            break;
+        case "Rain":
+            backgroundImage = "url(weatherImages/rainy.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/rainy.png";
+            break;
+        case "Drizzle":
+            backgroundImage = "url(weatherImages/rainy.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/drizzle.png";
+            break;
+        case "Haze":
+        case "Smoke":
+        case "Dust":
+            backgroundImage = "url(weatherImages/haze.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/mist.png";
+            break;
+        case "Snow":
+            backgroundImage = "url(weatherImages/snow.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/snowy.png";
+            break;
+        case "Mist":
+        case "Fog":
+            backgroundImage = "url(weatherImages/mistFog.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/mist.png";
+            break;
+        case "Tornado":
+            backgroundImage = "url(weatherImages/tornado.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/tornado.png";
+            break;
+        case "Thunderstorm":
+            backgroundImage = "url(weatherImages/storm.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/stormy.png";
+            break;
+        case "Wind":
+            backgroundImage = "url(weatherImages/windyClear.jpg)";
+            weatherIconSrc = "weatherImages/weather icons/windy.png";
+            break;
+        default:
+            break;
     }
-    else if(data.weather[0].main == "Clear"){
-        document.body.style.backgroundImage = "url(weatherImages/sunny.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/sunny.png"
-    }
-    else if(data.weather[0].main == "Rain"){
-        document.body.style.backgroundImage = "url(weatherImages/rainy.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/rainy.png"
-    }
-    else if(data.weather[0].main == "Drizzle"){
-        document.body.style.backgroundImage = "url(weatherImages/rainy.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/drizzle.png"
-    }
-    else if(data.weather[0].main == "Haze"|| data.weather[0].main == "Smoke" || data.weather[0].main == "Dust"){ 
-        // haze: dust and smoke in the air
-        document.body.style.backgroundImage = "url(weatherImages/haze.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/mist.png"
-    }
-    else if(data.weather[0].main == "Snow"){
-        document.body.style.backgroundImage = "url(weatherImages/snow.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/snowy.png"
-    }
-    else if(data.weather[0].main == "Mist" || data.weather[0].main == "Fog"){
-        document.body.style.backgroundImage = "url(weatherImages/mistFog.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/mist.png"
-    }
-    else if(data.weather[0].main == "Tornado"){
-        document.body.style.backgroundImage = "url(weatherImages/tornado.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/tornado.png"
-    }
-    else if(data.weather[0].main == "Thunderstorm"){
-        document.body.style.backgroundImage = "url(weatherImages/storm.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/stormy.png"
-    }
-    else if(data.weather[0].main == "Wind"){
-        document.body.style.backgroundImage = "url(weatherImages/windyClear.jpg)"
-        document.body.style.backgroundSize = "cover"
-        weatherIcon.src = "weatherImages/weather icons/windy.png"
-    }
-    
-    
-    
-    
+    body.style.transition = "background-image 1.5s ease-in-out"; 
+    body.style.backgroundImage = backgroundImage;
+    weatherIcon.src = weatherIconSrc;
     
 
 }
