@@ -111,3 +111,12 @@ opacity: 1;
 .weather{
     display: none;
 }
+
+.loading{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
