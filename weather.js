@@ -98,7 +98,7 @@ function changeWeatherIconAndBg(data){
         default:
             break;
     }
-    body.style.transition = "background-image 1.5s ease-in-out"; 
+    body.style.transition = "background-image 1.2s ease-out"; 
     body.style.backgroundImage = backgroundImage;
     weatherIcon.src = weatherIconSrc;
     
