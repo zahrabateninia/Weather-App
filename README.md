@@ -1,6 +1,6 @@
 # Weather Forecast App
 
-This is a simple weather forecast web application that allows users to search for weather information for specific locations. Users can toggle between displaying the temperature in Celsius.
+This is a simple weather forecast web application that allows users to search for weather information for specific locations.
 
 ## Features
 
